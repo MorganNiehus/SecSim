@@ -1,0 +1,14 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class BankPanel extends JPanel{
+	
+	private final int WIDTH = 300, HEIGHT = 200;
+	
+	public BankPanel(){
+		
+		setPreferredSize(new Dimension(WIDTH, HEIGHT));
+		setBackground(Color.DARK_GRAY);
+	}
+
+}

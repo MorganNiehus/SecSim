@@ -1,0 +1,35 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class BankPanel extends JPanel{
+	
+	private final int WIDTH = 500, HEIGHT = 500;
+	private double balance = 0;
+	private JTextField deposit;
+	private JTextField withdraw;
+	
+	public BankPanel(){
+	
+		deposit = new JTextField(5);
+		withdraw = new JTextField(5);
+		
+		deposit.addActionListener(new depositListener());
+		
+		add(deposit);
+		add(withdraw);
+		
+		setLayout(new BorderLayout());
+		setPreferredSize(new Dimension(WIDTH, HEIGHT));
+		setBackground(Color.DARK_GRAY);
+	}
+	private class depositListener implements ActionListener{
+		
+		public void actionPerformed(ActionEvent event){
+			double dAmount;
+			String amount = deposit.getText();
+			dAmount = Double.parseDouble(amount);
+		}
+	}
+
+}

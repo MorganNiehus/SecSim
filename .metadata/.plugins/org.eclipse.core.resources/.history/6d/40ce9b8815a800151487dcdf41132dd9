@@ -1,0 +1,22 @@
+import javax.swing.*;
+import java.awt.*;
+
+public class BankPanel extends JPanel{
+	
+	private final int WIDTH = 300, HEIGHT = 200;
+	private double balance = 0;
+	
+	public BankPanel(){
+		
+		setLayout(new GridLayout(2,3));
+		setPreferredSize(new Dimension(WIDTH, HEIGHT));
+		setBackground(Color.DARK_GRAY);
+		
+		JButton deposit = new JButton("Deposit");
+		JButton withdraw = new JButton("Withdraw");
+		
+		add(deposit);
+		
+	}
+
+}

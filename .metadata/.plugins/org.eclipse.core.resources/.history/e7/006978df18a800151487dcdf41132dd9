@@ -1,0 +1,36 @@
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class BankPanel extends JPanel{
+	
+	private final int WIDTH = 400, HEIGHT = 100;
+	private double balance = 0;
+	private JButton depositPush;
+	private JButton withdrawPush;
+	private JButton seeBalancePush;
+	
+	public BankPanel(){
+		
+		setLayout(new GridLayout(1,3));
+		setPreferredSize(new Dimension(WIDTH, HEIGHT));
+		setBackground(Color.DARK_GRAY);
+		
+		depositPush = new JButton("Deposit");
+		depositPush.addActionListener(new depositListener());
+		withdrawPush = new JButton("withdraw");
+		seeBalancePush = new JButton("See Balance");
+		
+		add(depositPush);
+		add(withdrawPush);
+		add(seeBalancePush);
+		
+	}
+	private class depositListener implements ActionListener{
+		
+		public void actionPerformed(ActionEvent event){
+			
+		}
+	}
+
+}
