@@ -1,8 +1,0 @@
-import java.util.*;
-public class AreaMain {
-	
-	AreaSkel skel = new AreaSkel(5.5 , 10.5);
-	
-	
-
-}

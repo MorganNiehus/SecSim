@@ -1,5 +1,0 @@
-import javax.swing.*;
-
-public class BankPanel extends JPanel{
-
-}
