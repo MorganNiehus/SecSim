@@ -11,9 +11,15 @@ public class PasswordChecker {
 		System.out.println("Input password:");
 		String password = s.nextLine();
 		
-		System.out.println(isLevel1(password));
-		System.out.println(isLevel2(password));
-		System.out.println(passwordLevel(password));
+		if(password.length() >= 5){
+			System.out.println(isLevel1(password));
+			System.out.println(isLevel2(password));
+			System.out.println(passwordLevel(password));
+		}
+		else
+			System.out.println("must be more than 6 characters!");
+		
+
 		
 	}
 	
@@ -107,7 +113,8 @@ public class PasswordChecker {
 	public static boolean oneDigit(String password){
 		boolean hasDigit = false;
 		for(int i = 0; i < password.length(); i++){
-			if(i >= 1 && i <= 9){
+			int currentChar = password.charAt(i);
+			if(currentChar >= '0' && currentChar <= '9'){
 				hasDigit = true;
 				break;
 			}
