@@ -8,13 +8,13 @@ public class PasswordChecker {
 		
 		Scanner s = new Scanner(System.in);
 		
-		System.out.println("Input password:");
+		System.out.print("Proposed Password:\t");
 		String password = s.nextLine();
 		
 		if(password.length() >= 5){
-			System.out.println(isLevel1(password));
-			System.out.println(isLevel2(password));
-			System.out.println(passwordLevel(password));
+			System.out.println("isLevel1(): " + isLevel1(password));
+			System.out.println("isLevel2(): " + isLevel2(password));
+			System.out.println("passwordLevel(): " + passwordLevel(password));
 		}
 		else
 			System.out.println("must be more than 6 characters!");
