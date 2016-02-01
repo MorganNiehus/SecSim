@@ -49,7 +49,23 @@ public class Account {
 	{
 		return dateCreated;
 	}
-	
-	
+	public double getMonthlyInterestRate()
+	{
+		double monthly = annualInterestRate / 12;
+		return monthly;
+	}
+	public double getMonthlyInterest()
+	{
+		double newBalance = balance * getMonthlyInterestRate();
+		return newBalance;
+	}
+	public double withdraw(double amount)
+	{
+		return balance -= amount;
+	}
+	public double deposit(double amount)
+	{
+		return balance += amount;
+	}
 
 }
