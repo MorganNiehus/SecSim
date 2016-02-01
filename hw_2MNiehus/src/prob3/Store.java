@@ -1,7 +1,5 @@
 package prob3;
 
-import java.util.Arrays;
-
 public class Store {
 	
 	private Employee[] emps = new Employee[20];
@@ -29,19 +27,15 @@ public class Store {
 	}
 	public void addEmp(Employee e)
 	{
-		int total = emps.length - 1;
-		for(int i = 0; i < emps.length; i++)
-		{
-			
-		}
+		emps[numEmps++] = e;
 	}
 	
 	public double totalHours()
 	{
 		double total = 0;
-		for(int i = 0; i < emps.length; i++)
+		for(int i = 0; i < numEmps; i++)
 		{
-			
+			total += emps[i].totalHours();
 		}
 		return total;
 	}
@@ -49,8 +43,13 @@ public class Store {
 	public String toString()
 	{
 		String result = " ";
-		result = "\nnumber of employees" + getNumEmps() + "\n" + "Total hours " + totalHours();
-		return result;
+		
+		for(int i = 0; i > emps.length; i++)
+		{
+			System.out.print(i);
+		}
+		String hoursWorked = "\nnumber of Employees " + getNumEmps() + "\nTotal hours " + totalHours();
+		return result + " " + hoursWorked;
 	}
 
 }
