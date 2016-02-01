@@ -25,12 +25,15 @@ public class Store {
 				return emps[j];
 		}
 		return null;
+		
 	}
 	public void addEmp(Employee e)
 	{
-		final int N = emps.length;
-		emps = Arrays.copyOf(emps, N + 1);
-		emps[N] = e;
+		int total = emps.length - 1;
+		for(int i = 0; i < emps.length; i++)
+		{
+			
+		}
 	}
 	
 	public double totalHours()
@@ -38,7 +41,7 @@ public class Store {
 		double total = 0;
 		for(int i = 0; i < emps.length; i++)
 		{
-			total += totalHours();
+			
 		}
 		return total;
 	}
@@ -46,9 +49,7 @@ public class Store {
 	public String toString()
 	{
 		String result = " ";
-		for(int i = 0; i < emps.length; i++)
-			System.out.print(emps[i]);
-		result = "\nnumber of employees" + getNumEmps() + "\n" + "Total hours ";
+		result = "\nnumber of employees" + getNumEmps() + "\n" + "Total hours " + totalHours();
 		return result;
 	}
 
