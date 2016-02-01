@@ -6,6 +6,7 @@ public class EmployeeTester {
 	
 	public static void main(String[] args)
 	{
+
 		Scanner s = new Scanner(System.in);
 		System.out.print("-->Enter a name : ");
 		String name = s.nextLine();
@@ -23,6 +24,7 @@ public class EmployeeTester {
 		}
 
 		Employee emp1 = new Employee(name);
+
 		
 		for(int i = 0; i < hours.length; i++)
 		{
@@ -30,17 +32,13 @@ public class EmployeeTester {
 		}
 		
 		System.out.println(emp1.toString());
+
 		
 		System.out.print("-->Enter a day of the week (0 - 6): ");
 		int day = s.nextInt();
+		s.close();
 		
 		System.out.println("hours worked on " + day + " is " + emp1.getHours(day));
-		
-		
-		
-		
-		
-		
 		
 	}
 
