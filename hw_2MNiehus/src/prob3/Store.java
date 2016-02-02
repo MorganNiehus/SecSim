@@ -1,5 +1,7 @@
 package prob3;
 
+import java.util.Arrays;
+
 public class Store {
 	
 	private Employee[] emps = new Employee[20];
@@ -43,11 +45,7 @@ public class Store {
 	public String toString()
 	{
 		String result = " ";
-		
-		for(int i = 0; i > emps.length; i++)
-		{
-			System.out.print(i);
-		}
+		result = Arrays.toString(emps).replaceAll("null", "").replaceAll(",", "").replaceAll("]", "");
 		String hoursWorked = "\nnumber of Employees " + getNumEmps() + "\nTotal hours " + totalHours();
 		return result + " " + hoursWorked;
 	}
