@@ -45,9 +45,12 @@ public class Store {
 	public String toString()
 	{
 		String result = " ";
-		result = Arrays.toString(emps).replaceAll("null", "").replaceAll(",", "").replaceAll("]", "");
-		String hoursWorked = "\nnumber of Employees " + getNumEmps() + "\nTotal hours " + totalHours();
-		return result + " " + hoursWorked;
+		for(int i = 0; i < numEmps; i++)
+		{
+			result += emps[i];
+		}
+		String hoursWorked = "\nTotal hours " + totalHours();
+		return "\nnumber of Employees " + getNumEmps() + "\n" + result.trim() + " " + hoursWorked;
 	}
 
 }
