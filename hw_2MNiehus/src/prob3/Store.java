@@ -1,22 +1,24 @@
 package prob3;
 
-import java.util.Arrays;
 
 public class Store {
 	
-	private Employee[] emps = new Employee[20];
-	private int numEmps = 0;
+	private Employee[] emps = new Employee[20];//default store cap
+	private int numEmps = 0;//default number of employees
 	
 	public Store()
 	{
 		
 	}
 	
-	public int getNumEmps()
+	public int getNumEmps()//get the current number of employees
 	{
 		return numEmps;
 	}
-	
+	//******************************************
+	//method checks the input and matches it
+	//to an object in the array
+	//******************************************
 	public Employee getEmp(int i)
 	{
 		for(int j = 0; j < emps.length; j++)
@@ -27,11 +29,18 @@ public class Store {
 		return null;
 		
 	}
+	//******************************************
+	//adds employee to the latest position
+	//in the array
+	//******************************************
 	public void addEmp(Employee e)
 	{
 		emps[numEmps++] = e;
 	}
-	
+	//******************************************
+	//this method calculates the total
+	//number of hours in the store
+	//******************************************
 	public double totalHours()
 	{
 		double total = 0;
@@ -49,8 +58,8 @@ public class Store {
 		{
 			result += emps[i];
 		}
-		String hoursWorked = "\nTotal hours " + totalHours();
-		return "\nnumber of Employees " + getNumEmps() + "\n" + result.trim() + " " + hoursWorked;
+		return "\nnumber of Employees " + getNumEmps() + "\n" 
+				+ result.trim() + " " + "\nTotal hours " + totalHours();
 	}
 
 }
