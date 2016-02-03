@@ -42,7 +42,7 @@ public class Store {
 	//******************************************
 	public void addEmp(Employee e)
 	{
-		emps[numEmps++] = e;
+		emps[numEmps++] = e;//adding an Emp at the end of the array
 	}
 	//******************************************
 	//this method calculates the total
@@ -53,10 +53,14 @@ public class Store {
 		double total = 0;
 		for(int i = 0; i < numEmps; i++)
 		{
-			total += emps[i].totalHours();
+			total += emps[i].totalHours();//looping the hours of each Emp
 		}
 		return total;
 	}
+	//******************************************
+	//toString method will print the information
+	//created in the class
+	//******************************************
 	
 	public String toString()
 	{

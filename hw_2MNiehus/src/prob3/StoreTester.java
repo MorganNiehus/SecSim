@@ -8,7 +8,9 @@
 package prob3;
 
 public class StoreTester {
-	
+	//*************************
+	//given driver for Store
+	//*************************
 	public static void main(String[] args) {
 		Store store = new Store();
 		Employee e = new Employee("Dave");

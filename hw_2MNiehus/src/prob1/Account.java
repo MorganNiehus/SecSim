@@ -1,14 +1,22 @@
+//************************
+//Name: Morgan Niehus
+//Student ID: 870537844
+//Class: CS 1302-A
+//HW: HomeWork 2
+//Due Date: 2/3/16
+//************************
 package prob1;
 
 import java.util.Date;
 
 public class Account {
 	
+	//set our private variables
 	private int id = 0;
 	private double balance = 0;
 	private double annualInterestRate = 0;
 	private Date dateCreated = new Date();
-	
+	//constructor
 	public Account()
 	{
 		id = 00000;
@@ -17,11 +25,17 @@ public class Account {
 		dateCreated = new Date();
 		
 	}
+	//overload constructor
 	public Account(int id, double balance)
 	{
 		this.id = id;
 		this.balance = balance;
 	}
+	//******************************
+	//below are all the getters and
+	//setters for the private
+	//variables
+	//******************************
 	public int getId() 
 	{
 		return id;
@@ -51,7 +65,7 @@ public class Account {
 	}
 	public double getMonthlyInterestRate()
 	{
-		double monthly = annualInterestRate / 12;
+		double monthly = annualInterestRate / 12;//simple math to get the monthly interest
 		return monthly;
 	}
 	public double getMonthlyInterest()
