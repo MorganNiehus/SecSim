@@ -14,11 +14,11 @@ printCheckingInfo(account);
 account.withdraw(999.0);
 printCheckingInfo(account);
 SavingsAccount sAccount = new SavingsAccount(1122, 1000.0);
-//printSavingsInfo(sAccount);
-//sAccount.withdraw(1001.0);
-//printSavingsInfo(sAccount);
-//sAccount.withdraw(999.0);
-//printSavingsInfo(sAccount);
+printSavingsInfo(sAccount);
+sAccount.withdraw(1001.0);
+printSavingsInfo(sAccount);
+sAccount.withdraw(999.0);
+printSavingsInfo(sAccount);
 }
 public static void printCheckingInfo( CheckingAccount acnt) {
 System.out.printf("Bal: $%4.2f, overdraft limit: $%4.2f\n", acnt.getBalance(), acnt.getOverdraftLimit());
