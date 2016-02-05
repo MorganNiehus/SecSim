@@ -7,9 +7,9 @@ public class CheckingAccount extends Account{
 	
 	public CheckingAccount(int id, double balance, double overdraftLimit)
 	{
+		super(id,balance);
 		this.overdraftLimit = overdraftLimit;
-		setBalance(balance);
-		setId(id);
+		
 	}
 	
 	public double getOverdraftLimit()
@@ -26,7 +26,7 @@ public class CheckingAccount extends Account{
 	public double withdraw(double amount)
 	{
 		double temp = super.withdraw(amount);
-		if(getBalance() >= getOverdraftLimit())
+		if(temp <= -getOverdraftLimit())
 			temp = deposit(amount);
 		return temp;
 	}
