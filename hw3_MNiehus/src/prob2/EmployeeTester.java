@@ -19,35 +19,35 @@ public class EmployeeTester {
 		String name = s.nextLine();
 		System.out.print("What type of employee : "); 
 		String empType = s.nextLine();
+		System.out.print("What is the wage? : ");
+		double wagePerHour = s.nextDouble();
 		System.out.print("-->Enter hours worked (7 values seperated by spaces): ");
 		String hoursStr = s.nextLine();//captures hours as a String
+		s.close();
 
 		if(empType.equals("h")){
-			HourlyEmployee h1 = new HourlyEmployee(name);
-			displayHourly(h1);
-			hoursReturnAndSet(hoursStr, h1);
+			HourlyEmployee h = new HourlyEmployee(name, wagePerHour);
+			double[] hours = hoursReturn(hoursStr);
+			for(int i = 0; i < hours.length; i++)
+				h.setHours(i, 8);
+			displayHourly(h);
+			
 		}
-		else if(empType == "e"){
-			Employee e1 = new Employee(name);
-			displayEmployee(e1);
-			//hoursReturnAndSet(hoursStr, e1);
-		}
-		
+	
 	}
 	
 	public static void displayHourly(HourlyEmployee h){
+	    
 		System.out.println(h.toString());
+		
 	}
 	
-	public static void displayEmployee(Employee e){
-		System.out.println(e.toString());
-	}
 	
 	public static void displaySalary(){
 		
 	}
 	
-	public static double[] hoursReturnAndSet(String hoursStr, HourlyEmployee o){
+	public static double[] hoursReturn(String hoursStr){
 		double[] hours = new double[7];
 		String hoursStrTrim = hoursStr.trim();
 		hoursStrTrim = hoursStr.replaceAll("\\s", "");
@@ -55,11 +55,10 @@ public class EmployeeTester {
 			double number = hoursStrTrim.charAt(i);
 			hours[i] = number - '0';
 		}
-		for(int i = 0; i < hours.length; i++){
-			o.setHours(i, hours[i]);
-		}
 		return hours;
 	}
+	
+	
 	
 
 }
