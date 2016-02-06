@@ -2,41 +2,31 @@ package prob2;
 
 public class HourlyEmployee extends Employee{
 	
-	private double wage = 0;
+	private double payRate = 0;
 	
-	public HourlyEmployee(String name, double wage)
+	public HourlyEmployee(String name, double payRate)
 	{
-		super(name, wage);
-		this.wage = wage;
-	}
-	
-	public double getWage()
-	{
-		return wage;
-	}
-	
-	public void setWage(double wage)
-	{
-		this.wage = wage;
+		super(name);
+		this.payRate = payRate;
 	}
 	
 	@Override
-	public double wages()
+	public double wages(double payRate)
 	{
 		double temp = 0;
-		for(int i = 0; i < super.totalHours(); i++)
-		{
-			if(super.totalHours() >= 40)
-			{
-				temp = wage *= super.totalHours();
-			}
- 		}
-		return temp;
+		if(totalHours() > 40){
+			temp = 400;
+			payRate = payRate / 2;
+		}
+		return payRate * totalHours() + temp;
 	}
 	
+	@Override
 	public String toString()
 	{
-		String result = super.toString() + " Total wages = " + wages();
+		String result = " ";
+		result = super.toString() + "\nTotalWages" + wages(payRate);
 		return result;
 	}
+
 }

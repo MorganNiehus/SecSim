@@ -11,12 +11,20 @@ public class Employee {
 	
 	private double[] hours = new double[7];//day of the week
 	private String name;
-	private double wage;
 	
-	public Employee(String name, double wage)
+	public Employee(String name)
 	{
 		this.name = name;
-		this.wage = wage;
+	}
+	
+	public String getName()
+	{
+		return name;
+	}
+	
+	public void setName(String name)
+	{
+		this.name = name;
 	}
 	//******************************
 	//this will check and see if the day
@@ -44,16 +52,6 @@ public class Employee {
 				hours[i] = hrs;//sets the hours to the array
 			}
 		}
-	}
-	
-	public double getWage()
-	{
-		return wage;
-	}
-	
-	public void setWage(double wage)
-	{
-		this.wage = wage;
 	}
 	//*************************************
 	//this method simply sets a counter
@@ -89,19 +87,9 @@ public class Employee {
 		return sum;
 	}
 	
-	public double wages()
+	public double wages(double payRate)
 	{
-		double temp = 0;
-		for(int i = 0; i < hours.length; i++)
-		{
-			temp = wage *= hours[i];
-		}
-		return temp;
-	}
-	
-	public String getName()
-	{
-		return name;
+		return payRate* totalHours();
 	}
 	
 	public String toString()//prints the class contents 
