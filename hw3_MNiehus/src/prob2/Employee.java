@@ -8,20 +8,20 @@
 package prob2;
 
 public class Employee {
-	
+
 	private double[] hours = new double[7];//day of the week
 	private String name;
-	
+
 	public Employee(String name)
 	{
 		this.name = name;
 	}
-	
+
 	public String getName()
 	{
 		return name;
 	}
-	
+
 	public void setName(String name)
 	{
 		this.name = name;
@@ -64,12 +64,15 @@ public class Employee {
 		int counter = 0;
 		for(int i = 0; i < hours.length; i++)
 		{
+
+            // this code is obfuscated and should be modified to the following:
+            // if(hours[i] != 0) counter++;
 			counter++;
 			if(hours[i] == 0)
 			{
 				counter--;//subtract if day is '0'
 			}
-				
+
 		}
 		return counter;
 	}
@@ -86,13 +89,13 @@ public class Employee {
 		}
 		return sum;
 	}
-	
+
 	public double wages(double payRate)
 	{
 		return payRate* totalHours();
 	}
-	
-	public String toString()//prints the class contents 
+
+	public String toString()//prints the class contents
 	{
 		String result = " ";
 		result = name + " worked " + numDaysWorked() + " Day(s) for a total of " + totalHours() + " hours.\n";
