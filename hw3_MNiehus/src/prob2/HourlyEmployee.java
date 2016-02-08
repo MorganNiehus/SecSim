@@ -14,14 +14,14 @@ public class HourlyEmployee extends Employee{
 	public double wages(double payRate)
 	{
 		double temp = 0;
-        int hours = totalHours();
+        double hours = totalHours();
 		if(hours > 40){
 
             // we store the pay for 40 hours here to be added
 			temp = 40 * payRate;
 
             // remove the 40 hours already accounted for
-            hour -= 40;
+            hours -= 40;
 			payRate = payRate / 2;
 		}
 		return payRate * hours + temp;

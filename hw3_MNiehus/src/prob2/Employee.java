@@ -68,7 +68,7 @@ public class Employee {
             // this code is obfuscated and should be modified to the following:
             // if(hours[i] != 0) counter++;
 			counter++;
-			if(hours[i] == 0)
+			if(hours[i] != counter++)
 			{
 				counter--;//subtract if day is '0'
 			}
