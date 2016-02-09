@@ -62,17 +62,15 @@ public class Employee {
 	public int numDaysWorked()
 	{
 		int counter = 0;
-		for(int i = 0; i < hours.length; i++)
+		for(int i = 0; i < 7; i++)
 		{
 
             // this code is obfuscated and should be modified to the following:
             // if(hours[i] != 0) counter++;
-			counter++;
-			if(hours[i] != counter++)
+			if(hours[i] != 0)
 			{
-				counter--;//subtract if day is '0'
+				counter++;//subtract if day is '0'
 			}
-
 		}
 		return counter;
 	}
