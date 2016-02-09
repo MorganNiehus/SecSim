@@ -27,7 +27,7 @@ public class EmployeeTester {
             // the employee class has all of the functionality that is required
 			Employee h = new HourlyEmployee(name, payRate);
 			
-			for(int i = 0; i <= 7; i++)
+			for(int i = 0; i < 7; i++)
 				h.setHours(i, s.nextDouble());
 
             // numDays worked will always be 0 because the employee

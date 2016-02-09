@@ -22,7 +22,7 @@ public class HourlyEmployee extends Employee{
 
             // remove the 40 hours already accounted for
             hours -= 40;
-			payRate = payRate / 2;
+			payRate = payRate * 1.5;
 		}
 		return payRate * hours + temp;
 	}
