@@ -6,7 +6,7 @@ public class EmployeeTester {
 
 	public static void main(String[] args)
 	{
-		Scanner s = new Scanner(System.in);
+		Scanner s = new Scanner(System.in);//scanner
 
 		System.out.print("input name: ");
 		String name = s.nextLine();
