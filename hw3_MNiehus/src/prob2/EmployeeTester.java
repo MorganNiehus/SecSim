@@ -6,16 +6,16 @@ public class EmployeeTester {
 
 	public static void main(String[] args)
 	{
-		Scanner s = new Scanner(System.in);//scanner
+		Scanner scan = new Scanner(System.in);//scanner
 
 		System.out.print("input name: ");
-		String name = s.nextLine();
+		String name = scan.nextLine();
 
 		System.out.print("input type: ");
-		String type = s.nextLine();
+		String type = scan.nextLine();
 
 		System.out.print("input payRate: ");
-		double payRate = s.nextDouble();
+		double payRate = scan.nextDouble();
 		
 		System.out.print("input hour: ");
 
@@ -28,13 +28,23 @@ public class EmployeeTester {
 			Employee h = new HourlyEmployee(name, payRate);
 			
 			for(int i = 0; i < 6; i++)
-				h.setHours(i, s.nextDouble());
+				h.setHours(i, scan.nextDouble());
 
             // numDays worked will always be 0 because the employee
             // has just been instantiated
 			displayEmployee(h);
 		}
-		s.close();
+		else if(type.equals("s"))
+		{
+			Employee s = new SalariedEmployee(name, payRate);
+			
+			for(int i = 0; i < 6; i++)
+				s.setHours(i, scan.nextDouble());
+			
+			displayEmployee(s);
+			
+		}
+		scan.close();
 
 	}
 
@@ -42,6 +52,7 @@ public class EmployeeTester {
 	{
 			System.out.println(h.toString());	
 	}
+	
 
 
 
