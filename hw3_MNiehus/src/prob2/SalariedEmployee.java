@@ -11,24 +11,28 @@ public class SalariedEmployee extends Employee {
 	}
 	
 	@Override
-	public double wages(double payRate)
-	{
-		double temp = 0;
-        double hours = totalHours();
-        for(int i = 0; i < 6; i++)
-        {
-        	if(getHours(i) == 5 || getHours(i) == 6)
-        	{
-        		payRate = payRate * 1.5;
-        	}
-        }
-		return payRate * hours + temp;
-	}
+	 public double wages(double payRate)
+	 {
+	  double totalWages = 0;
+	        double hours = totalHours();
+	        for(int i = 0; i < 7; i++)
+	        {
+	         if(i == 5 || i == 6)
+	         {
+	          totalWages += payRate * 1.5 * getHours(i);
+	         }
+	         else
+	         {
+	          totalWages += payRate * getHours(i);
+	         }
+	        }
+	  return totalWages;
+	 }
 	
 	public String toString()
 	{
 		String result = " ";
-		result = super.toString() + "\nTotal Wages: " + wages(payRate);
+		result = super.getName() + " worked " + numDaysWorked() + " Day(s) for a total of " + totalHours() + " hours.\n" + "Total Wage: " + wages(payRate);
 		return result;
 	}
 

@@ -30,7 +30,7 @@ public class HourlyEmployee extends Employee{
 	public String toString()
 	{
 		String result = " ";
-		result = super.toString() + "\nTotal Wages: " + wages(payRate);
+		result = super.getName() + " worked " + numDaysWorked() + " Day(s) for a total of " + totalHours() + " hours.\n" + "Total Wage: " + wages(payRate);
 		return result;
 	}
 

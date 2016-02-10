@@ -33,20 +33,20 @@ public class Employee {
 	{
 		this.name = name;
 	}
+	
 	//******************************
-	//this will check and see if the day
-	//matches a day of the week on an array
-	//******************************
-	public double getHours(int day)
-	{
-		double hoursPerDay = 0;
-		for(int i = 0; i < hours.length; i++)
-		{
-			if(day == i)
-				hoursPerDay = hours[i];
-		}
-		return hoursPerDay;
-	}
+	 //this will check and see if the day
+	 //matches a day of the week on an array
+	 //******************************
+	 public double getHours(int day)
+	 {
+	  if(day < 0 || day > 6)
+	  {
+	   return 0;
+	  }
+	  return hours[day];
+	 }
+	 
 	//*************************************
 	//sets the hours given by the driver
 	//*************************************

@@ -38,7 +38,7 @@ public class EmployeeTester {
 		{
 			Employee s = new SalariedEmployee(name, payRate);
 			
-			for(int i = 0; i < 6; i++)
+			for(int i = 0; i < 7; i++)
 				s.setHours(i, scan.nextDouble());
 			
 			displayEmployee(s);
@@ -48,7 +48,7 @@ public class EmployeeTester {
 		{
 			Employee e = new Employee(name, payRate);
 			
-			for(int i = 0; i < 6; i++)
+			for(int i = 0; i < 7; i++)
 				e.setHours(i, scan.nextDouble());
 			
 			displayEmployee(e);
@@ -62,7 +62,7 @@ public class EmployeeTester {
 
 	public static void displayEmployee(Employee h)
 	{
-			System.out.println(h.toString());	
+			System.out.println(h);	
 	}
 	
 
