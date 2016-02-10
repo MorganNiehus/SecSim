@@ -15,7 +15,6 @@ public class SalariedEmployee extends Employee {
 	{
 		double temp = 0;
         double hours = totalHours();
-        temp = hours * payRate;
         for(int i = 0; i < 6; i++)
         {
         	if(getHours(i) == 5 || getHours(i) == 6)
