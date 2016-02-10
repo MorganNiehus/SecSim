@@ -1,3 +1,10 @@
+//************************
+//Name: Morgan Niehus
+//Student ID: 870537844
+//Class: CS 1302-A
+//HW: HomeWork 2
+//Due Date: 2/3/16
+//************************
 package prob2;
 
 public class HourlyEmployee extends Employee{
@@ -11,7 +18,7 @@ public class HourlyEmployee extends Employee{
 	}
 
 	@Override
-	public double wages(double payRate)
+	public double wages(double payRate)//overide wages for Hourly
 	{
 		double temp = 0;
         double hours = totalHours();

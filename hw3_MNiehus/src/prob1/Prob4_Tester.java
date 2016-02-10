@@ -1,3 +1,10 @@
+//************************
+//Name: Morgan Niehus
+//Student ID: 870537844
+//Class: CS 1302-A
+//HW: HomeWork 2
+//Due Date: 2/3/16
+//************************
 package prob1;
 
 public class Prob4_Tester {
@@ -12,7 +19,7 @@ public class Prob4_Tester {
 	
 	public static void printOverdraftLimit(Account a)
 	{
-		if(a instanceof CheckingAccount)
+		if(a instanceof CheckingAccount)//checked to see of a was an instance of CheckingAccount
 		{
 			System.out.println("OverDraft Limit: " + ((CheckingAccount)a).getOverdraftLimit());
 		}

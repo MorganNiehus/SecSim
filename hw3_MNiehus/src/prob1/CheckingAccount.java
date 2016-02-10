@@ -1,3 +1,10 @@
+//************************
+//Name: Morgan Niehus
+//Student ID: 870537844
+//Class: CS 1302-A
+//HW: HomeWork 2
+//Due Date: 2/3/16
+//************************
 package prob1;
 
 public class CheckingAccount extends Account{
@@ -7,7 +14,7 @@ public class CheckingAccount extends Account{
 	
 	public CheckingAccount(int id, double balance, double overdraftLimit)
 	{
-		super(id,balance);
+		super(id,balance);//use the Account constructor
 		this.overdraftLimit = overdraftLimit;
 		
 	}
@@ -23,7 +30,7 @@ public class CheckingAccount extends Account{
 	}
 	
 	@Override
-	public double withdraw(double amount)
+	public double withdraw(double amount)//override the other withdraw method
 	{
 		double temp = super.withdraw(amount);
 		if(temp <= -getOverdraftLimit())

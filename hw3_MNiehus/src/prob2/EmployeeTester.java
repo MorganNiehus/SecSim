@@ -1,3 +1,10 @@
+//************************
+//Name: Morgan Niehus
+//Student ID: 870537844
+//Class: CS 1302-A
+//HW: HomeWork 2
+//Due Date: 2/3/16
+//************************
 package prob2;
 
 import java.util.Scanner;
@@ -60,7 +67,7 @@ public class EmployeeTester {
 
 	}
 
-	public static void displayEmployee(Employee h)
+	public static void displayEmployee(Employee h)//displays the toString of the class type Employee
 	{
 			System.out.println(h);	
 	}

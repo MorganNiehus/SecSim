@@ -1,3 +1,12 @@
+//************************
+//Name: Morgan Niehus
+//Student ID: 870537844
+//Class: CS 1302-A
+//HW: HomeWork 2
+//Due Date: 2/3/16
+//************************
+
+//given tester
 package prob1;
 public class AccountTester {
 public static void main (String[] args) {

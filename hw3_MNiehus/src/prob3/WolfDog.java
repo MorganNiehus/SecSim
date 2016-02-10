@@ -1,3 +1,10 @@
+//************************
+//Name: Morgan Niehus
+//Student ID: 870537844
+//Class: CS 1302-A
+//HW: HomeWork 2
+//Due Date: 2/3/16
+//************************
 package prob3;
 
 public class WolfDog extends Dog{
@@ -21,7 +28,7 @@ public class WolfDog extends Dog{
 	public String toString()
 	{
 		String result = "";
-		result = super.toString() + ", meaness: " + meanness;
+		result = super.toString() + ", meaness: " + meanness;//simply override the toString and print the extras
 		return result;
 	}
 }
