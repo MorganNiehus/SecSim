@@ -11,10 +11,17 @@ public class Employee {
 
 	private double[] hours = new double[7];//day of the week
 	private String name;
+	private double payRate = 0;
 
 	public Employee(String name)
 	{
 		this.name = name;
+	}
+	
+	public Employee(String name, double payRate)
+	{
+		this.name = name;
+		this.payRate = payRate;
 	}
 
 	public String getName()
@@ -90,13 +97,13 @@ public class Employee {
 
 	public double wages(double payRate)
 	{
-		return payRate* totalHours();
+		return payRate * totalHours();
 	}
 
 	public String toString()//prints the class contents
 	{
 		String result = " ";
-		result = name + " worked " + numDaysWorked() + " Day(s) for a total of " + totalHours() + " hours.\n";
+		result = name + " worked " + numDaysWorked() + " Day(s) for a total of " + totalHours() + " hours.\n" + "Total Wage: " + wages(payRate);
 		return result;
 	}
 

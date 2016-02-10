@@ -44,6 +44,18 @@ public class EmployeeTester {
 			displayEmployee(s);
 			
 		}
+		else if(type.equals("e"))
+		{
+			Employee e = new Employee(name, payRate);
+			
+			for(int i = 0; i < 6; i++)
+				e.setHours(i, scan.nextDouble());
+			
+			displayEmployee(e);
+			
+			
+			
+		}
 		scan.close();
 
 	}

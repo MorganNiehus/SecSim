@@ -27,11 +27,10 @@ public class HourlyEmployee extends Employee{
 		return payRate * hours + temp;
 	}
 
-	@Override
 	public String toString()
 	{
 		String result = " ";
-		result = super.toString() + "\nTotalWages" + wages(payRate);
+		result = super.toString() + "\nTotal Wages: " + wages(payRate);
 		return result;
 	}
 
