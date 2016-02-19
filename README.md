@@ -1,2 +1,0 @@
-# SecSim
-Second Semster
