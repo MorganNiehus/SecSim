@@ -27,28 +27,28 @@ public class RemoveDuplicate {
 		
 		System.out.println();
 		
-		
-
-		
-
 	}
 	
 	public static void removeDuplicate(ArrayList<Integer> list)
 	{
 		ArrayList<Integer> temp = new ArrayList<>();
-		for(int i = 0; i < list.size(); i++)
-		{
-			if(list.contains(i))
-			{
-				temp.add(i);
-			}
-		}
-		list.clear();
 		
+		for(int i = 0; i < list.size(); i++)
+		  {
+			
+			
+			if(!temp.contains(list.get(i)))
+				{
+					temp.add(list.get(i));
+				}
+		  }
+		  
+		list.clear();
+		  
 		for(int i = 0; i < temp.size(); i++)
-		{
-			list.add(temp.get(i));
-		}
+		  {
+			  list.add(temp.get(i));
+		  }
 	}
 
 }
