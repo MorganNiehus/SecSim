@@ -17,10 +17,10 @@ public class RegularAccount extends Account{
 		if(temp > 1000)
 		{
 			super.withdraw(1000);
-			temp = super.setBalance(super.getBalance() + (super.getBalance() * 0.01));
-			super.deposit(1000);
+			temp = super.getBalance() + (super.getBalance() * 0.01);
+			
 		}
-		return super.getBalance();
+		return super.setBalance(temp);
 	}
 	
 	@Override

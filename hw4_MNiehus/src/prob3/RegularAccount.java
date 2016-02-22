@@ -14,12 +14,14 @@ public class RegularAccount extends Account{
 
 	@Override
 	public double applyInterest() {
-		double temp = 0;
-		if(super.getBalance() > 1000)
+		double temp = super.getBalance();
+		if(temp > 1000)
 		{
-			temp = super.getBalance() + (super.getBalance() * 0.01);
+			super.withdraw(1000);
+			temp = super.setBalance(super.getBalance() + (super.getBalance() * 0.01));
+			super.deposit(1000);
 		}
-		return temp;
+		return super.getBalance();
 	}
 	
 	@Override

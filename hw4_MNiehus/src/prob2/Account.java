@@ -14,8 +14,8 @@ public abstract class Account {
 	public double getBalance() {
 		return balance;
 	}
-	public void setBalance(double balance) {
-		this.balance = balance;
+	public double setBalance(double balance) {
+		return this.balance = balance;
 	}
 	
 	public double deposit(double amount){

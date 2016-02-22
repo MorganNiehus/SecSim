@@ -13,7 +13,7 @@ public class PremiumAccount extends Account{
 
 	@Override
 	public double applyInterest() {
-		return (super.getBalance() * 0.015) + super.getBalance();
+		return setBalance((super.getBalance() * 0.015) + super.getBalance());
 	}
 	
 	@Override
