@@ -1,0 +1,35 @@
+package prob3;
+
+import java.util.ArrayList;
+
+public class Person{
+
+	ArrayList<Account> accounts = new ArrayList<>();
+	
+	public Person(){
+		
+	}
+	
+	public void addAccount(Account a){
+		accounts.add(a);
+	}
+	
+	public Account getAccount(int i){
+		return accounts.get(i);
+	}
+	
+	public int getNumAccounts(){
+		return accounts.size();
+	}
+	
+	public double getTotalBalance(){
+		double sum = 0;
+		for(int i = 0; i > accounts.size(); i++){
+			sum += accounts.get(i).getBalance();
+		}
+		return sum;
+	}
+	
+	
+	
+}

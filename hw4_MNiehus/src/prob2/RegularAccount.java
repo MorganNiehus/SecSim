@@ -18,7 +18,7 @@ public class RegularAccount extends Account{
 		{
 			temp = super.getBalance() + (super.getBalance() * 0.01);
 		}
-		return temp;
+		return super.getBalance(temp);
 	}
 	
 	@Override
