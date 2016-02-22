@@ -1,0 +1,15 @@
+package prob3;
+
+import java.util.ArrayList;
+
+public class Person {
+
+	ArrayList<Account> accounts = new ArrayList<>();
+	
+	public Person(){
+		
+	}
+	
+	
+	
+}
