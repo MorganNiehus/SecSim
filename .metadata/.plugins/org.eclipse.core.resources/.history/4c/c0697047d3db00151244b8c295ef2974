@@ -1,0 +1,9 @@
+package martian;
+
+import java.util.ArrayList;
+
+public class MartianManager {
+	
+	private ArrayList<Martians> martians = new ArrayList<>();
+
+}
