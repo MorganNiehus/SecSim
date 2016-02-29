@@ -1,7 +1,6 @@
 package martian;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class MartianManager {
 	
@@ -95,10 +94,7 @@ public class MartianManager {
 	
 	public ArrayList<Martian> sortedMartians(){
 		
-		@SuppressWarnings("unchecked")
-		ArrayList<Martian> sorted = (ArrayList<Martian>) martians.clone();
-		Collections.sort(sorted);
-		return sorted;
+		ArrayList<Martian> sorted = martians.clone();
 		
 	}
 	

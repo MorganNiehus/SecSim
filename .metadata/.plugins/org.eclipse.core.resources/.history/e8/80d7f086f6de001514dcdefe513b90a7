@@ -1,7 +1,6 @@
 package martian;
 
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class MartianManager {
 	
@@ -56,53 +55,8 @@ public class MartianManager {
 	}
 	
 	public String groupTeleport(String dest){
-		StringBuilder msg = new StringBuilder();
-		for(ITeleporter i : teleporters){
-			msg.append(i.teleport(dest) + "\n");
-		}
-		return msg.toString();
-	}
-	
-	public void obliterateTeleporters(){
-		
-		for(ITeleporter t : teleporters){
-			martians.remove((Martian)t);
-		}
-		
-		teleporters.clear();
 		
 	}
-	
-	public boolean removeMartian(int id){
-		
-		Martian dummy = new GreenMartian(id);
-		int loc = martians.indexOf(dummy);
-		
-		if(loc == -1) return false;
-		
-		Martian m = martians.get(loc);
-		martians.remove(loc);
-		
-		if(m instanceof GreenMartian){
-			
-			teleporters.remove((ITeleporter)m);
-			
-		}
-		
-		return true;
-		
-	}
-	
-	public ArrayList<Martian> sortedMartians(){
-		
-		@SuppressWarnings("unchecked")
-		ArrayList<Martian> sorted = (ArrayList<Martian>) martians.clone();
-		Collections.sort(sorted);
-		return sorted;
-		
-	}
-	
-	
 	
 	
 	

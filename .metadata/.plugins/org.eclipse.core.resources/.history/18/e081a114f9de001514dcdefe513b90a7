@@ -95,7 +95,6 @@ public class MartianManager {
 	
 	public ArrayList<Martian> sortedMartians(){
 		
-		@SuppressWarnings("unchecked")
 		ArrayList<Martian> sorted = (ArrayList<Martian>) martians.clone();
 		Collections.sort(sorted);
 		return sorted;
