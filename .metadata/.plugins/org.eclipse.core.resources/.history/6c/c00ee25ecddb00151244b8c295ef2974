@@ -1,7 +1,0 @@
-package martian;
-
-public class GreenMartian implements ITeleporter{
-	
-	
-
-}
