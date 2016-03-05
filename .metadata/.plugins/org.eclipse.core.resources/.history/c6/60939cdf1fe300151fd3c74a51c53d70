@@ -1,0 +1,41 @@
+package martian;
+
+public abstract class Martian {
+	
+	private int id;
+	private int vol;
+	
+	public Martian(int id, int vol){
+		this.id = id;
+		this.vol = vol;
+	}
+
+	public int getId() {
+		return id;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+
+	public int getVol() {
+		return vol;
+	}
+
+	public void setVol(int vol) {
+		this.vol = vol;
+	}
+	
+	public String toString(){
+		String result = "";
+		result = "id: " + id + "volume: " + vol;
+		return result;
+	}
+	
+	public abstract String speak();
+	
+	
+	
+	
+	
+}

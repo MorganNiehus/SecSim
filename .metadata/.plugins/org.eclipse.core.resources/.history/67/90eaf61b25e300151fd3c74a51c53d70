@@ -1,0 +1,26 @@
+package martian;
+
+public class MartianTester {
+
+	public static void main(String[] args) throws CloneNotSupportedException{
+		
+		RedMartian r1 = new RedMartian(10);
+		GreenMartian g1 = new GreenMartian(9);
+		
+		r1.setVol(5);
+		
+		RedMartian r1clone = (RedMartian) r1.clone();
+		
+		r1clone.setVol(10);
+		
+		System.out.print(r1.toString() + "\n" + r1clone.toString());
+		
+		
+		
+		
+		
+		
+		
+	}
+	
+}

@@ -1,0 +1,14 @@
+package martian;
+
+public class MartianTester {
+
+	public static void main(String[] args){
+		
+		RedMartian r1 = new RedMartian(10);
+		GreenMartian g1 = new GreenMartian(9);
+		
+		
+		
+	}
+	
+}

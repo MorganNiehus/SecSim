@@ -1,0 +1,18 @@
+package martian;
+
+public class GreenMartian extends Martian{
+	
+	public GreenMartian(int id){
+		super(id);
+	}
+	
+	@Override
+	public String speak(){
+		return getId() + "Greenly";
+	}
+	
+	public String toString(){
+		return "Green " + super.toString();
+	}
+
+}

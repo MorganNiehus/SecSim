@@ -1,0 +1,7 @@
+package martian;
+
+public interface ITeleporter {
+
+	public String teleport(String dest);
+	
+}

@@ -45,7 +45,7 @@ public abstract class Martian implements Comparable<Martian>,Cloneable {
 	
 	@Override
 	public String toString(){
-		return String.format("Martian id = %d vol = %d, id, volume");
+		return String.format("Martian id = %d vol = %d", id, volume);
 		
 	}
 }
