@@ -1,0 +1,13 @@
+package prob1;
+
+public class IllegalRectangleException extends RuntimeException{
+	
+	private double width;
+	private double height;
+	private double area;
+	
+	public IllegalRectangleException(double width, double height, double area){
+		super("Illegal Rectangle" + width + " " + " " + height + " " + area);
+	}
+
+}
