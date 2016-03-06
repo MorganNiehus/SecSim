@@ -1,0 +1,25 @@
+package geometricObjects;
+
+public class ShapeTester {
+	
+	public static void main(String[] args) throws CloneNotSupportedException{
+		
+		System.out.println("******Test 1 cloning");
+		
+		GeometricObject c1 = new Circle(5);
+		
+		GeometricObject c1Clone = (GeometricObject) c1.clone();
+		
+		c1.setColor("red");
+		
+		System.out.println(c1.toString());
+		
+		c1Clone.setColor("Green");
+		
+		System.out.println(c1Clone.toString());
+		
+		
+		
+	}
+	
+}
