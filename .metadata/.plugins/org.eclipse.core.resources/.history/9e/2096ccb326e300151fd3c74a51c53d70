@@ -1,0 +1,25 @@
+package martian;
+
+import java.util.ArrayList;
+
+public class MartianManager {
+	
+	private ArrayList<Martian> martians = new ArrayList<>();
+	
+	public boolean addMartian(Martian m){
+		if(!martians.contains(m)){
+			martians.add(m);
+			return true;
+		}
+		return false;
+	}
+	
+	public String groupSpeak(){
+		StringBuilder msg = new StringBuilder();
+		for(Martian m : martians){
+			msg.append(m.speak());
+		}
+		return msg.toString();
+	}
+
+}

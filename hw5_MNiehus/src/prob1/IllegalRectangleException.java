@@ -1,6 +1,7 @@
 package prob1;
 
 public class IllegalRectangleException extends RuntimeException{
+<<<<<<< HEAD
 
 	private double width;
 	private double height;
@@ -25,4 +26,8 @@ public class IllegalRectangleException extends RuntimeException{
 		return area;
 	}
 	
+=======
+	
+
+>>>>>>> 633fab66122e815a182996ff138fc36a7b3a9d19
 }

@@ -1,0 +1,17 @@
+package martian;
+
+import java.util.ArrayList;
+
+public class MartianManager {
+	
+	private ArrayList<Martian> martians = new ArrayList<>();
+	
+	public boolean addMartian(Martian m){
+		if(!martians.contains(m)){
+			martians.add(m);
+			return true;
+		}
+		return false;
+	}
+
+}
