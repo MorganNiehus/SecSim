@@ -13,13 +13,8 @@ public class Rectangle extends GeometricObject {
     
     
     
-<<<<<<< HEAD
     
   }
-=======
-  }
-    
->>>>>>> 633fab66122e815a182996ff138fc36a7b3a9d19
 
   /** Return width */
   public double getWidth() {
@@ -56,8 +51,4 @@ public class Rectangle extends GeometricObject {
     // Implement it to return the three sides
     return "Rectangle: width = " + width + ", height = " + height;
   }  
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 633fab66122e815a182996ff138fc36a7b3a9d19

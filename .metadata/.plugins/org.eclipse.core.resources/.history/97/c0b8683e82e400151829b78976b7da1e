@@ -1,0 +1,15 @@
+
+public class Trumpet extends Instrument{
+	
+	private String note;
+	
+	public Trumpet(String playerName, String note){
+		super(playerName);
+		this.note = note;
+	}
+	
+	public String play(){
+		return 
+	}
+
+}

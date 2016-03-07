@@ -1,0 +1,23 @@
+import java.util.ArrayList;
+
+public class Test {
+	
+	public static void main(String[] args){
+		ArrayList<String> cities1 = new ArrayList<>();
+		ArrayList<String> cities2 = new ArrayList<>();
+		
+		cities1.add("Miami");
+		cities2.add("Miami");
+		
+		String aCity = "Miami";
+		
+		if(cities1.contains(aCity) && cities2.contains(aCity)){
+			System.out.println("Hello");
+		}
+		else
+			System.out.println("you missed that one! loser");
+		
+		
+	}
+	
+}

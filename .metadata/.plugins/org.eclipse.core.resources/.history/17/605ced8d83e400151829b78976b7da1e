@@ -1,0 +1,11 @@
+
+public class BandTester {
+
+	public static void main(String[] args){
+		
+		Instrument trumpet = new Trumpet("Andrew", "A");
+		Instrument sax = new Sax("Annah", "B");
+		
+	}
+	
+}
