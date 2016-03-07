@@ -11,13 +11,12 @@ public class MartianManager {
 	
 	public boolean addMartian(Martian m){
 		if(!martians.contains(m)){
-			
 			martians.add(m);
 			
 			if(m instanceof GreenMartian){
 				teleporters.add((GreenMartian)m);
-			}
 			return true;
+			}
 		}
 		return false;
 	}
@@ -29,7 +28,6 @@ public class MartianManager {
 		for(Martian m : martians){
 			cman.addMartian((Martian)m.clone());
 		}
-		
 		return cman;
 	}
 	
@@ -37,7 +35,7 @@ public class MartianManager {
 		Martian closest = null;
 		int minDist = Integer.MAX_VALUE;
 		for(Martian m : martians){
-			int dist = Math.abs(m.getId()-id);
+			int dist = Math.abs(m.getId() - id);
 			
 			if(dist < minDist){
 				minDist = dist;
@@ -64,12 +62,11 @@ public class MartianManager {
 	}
 	
 	public void obliterateTeleporters(){
-		
-		for(ITeleporter t : teleporters){
-			martians.remove((Martian)t);
+		for(ITeleporter i : teleporters){
+			martians.remove((Martian)i);
 		}
-		
 		teleporters.clear();
+
 		
 	}
 	
@@ -84,9 +81,7 @@ public class MartianManager {
 		martians.remove(loc);
 		
 		if(m instanceof GreenMartian){
-			
 			teleporters.remove((ITeleporter)m);
-			
 		}
 		
 		return true;
@@ -94,11 +89,10 @@ public class MartianManager {
 	}
 	
 	public ArrayList<Martian> sortedMartians(){
-		
-		@SuppressWarnings("unchecked")
 		ArrayList<Martian> sorted = (ArrayList<Martian>) martians.clone();
 		Collections.sort(sorted);
 		return sorted;
+
 		
 	}
 	

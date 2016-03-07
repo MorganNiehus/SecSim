@@ -1,0 +1,14 @@
+package prob1;
+
+public class IllegalRectangleException extends RuntimeException{
+
+	private String messsage;
+	private double width;
+	private double height;
+	private double area;
+	
+	public IllegalRectangleException(String message, double width, double height, double area){
+		
+	}
+	
+}

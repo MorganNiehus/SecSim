@@ -1,0 +1,118 @@
+package martian;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class MartianManager {
+	
+	private ArrayList<Martian> martians = new ArrayList<>();
+	private ArrayList<ITeleporter> teleporters = new ArrayList<>();
+
+	
+	public boolean addMartian(Martian m){
+		if(!martians.contains(m)){
+			
+			martians.add(m);
+			
+			if(m instanceof GreenMartian){
+				teleporters.add((GreenMartian)m);
+			}
+			return true;
+		}
+		return false;
+	}
+	
+	@Override
+	public Object clone() throws CloneNotSupportedException{
+		MartianManager cman = new MartianManager();
+		
+		for(Martian m : martians){
+			cman.addMartian((Martian)m.clone());
+		}
+		
+		return cman;
+	}
+	
+	public Martian getMartianClosestToId(int id){
+		Martian closest = null;
+		int minDist = Integer.MAX_VALUE;
+		for(Martian m : martians){
+			int dist = Math.abs(m.getId()-id);
+			
+			if(dist < minDist){
+				minDist = dist;
+				closest = m;
+			}
+		}
+		return closest;
+	}
+	
+	public String groupSpeak(){
+		StringBuilder msg = new StringBuilder();
+		for(Martian m : martians){
+			msg.append(m.speak() + "\n");
+		}
+		return msg.toString();
+	}
+	
+	public String groupTeleport(String dest){
+		StringBuilder msg = new StringBuilder();
+		for(ITeleporter i : teleporters){
+			msg.append(i.teleport(dest) + "\n");
+		}
+		return msg.toString();
+	}
+	
+	public void obliterateTeleporters(){
+		
+		for(ITeleporter t : teleporters){
+			martians.remove((Martian)t);
+		}
+		
+		teleporters.clear();
+		
+	}
+	
+	public boolean removeMartian(int id){
+		
+		Martian dummy = new GreenMartian(id);
+		int loc = martians.indexOf(dummy);
+		
+		if(loc == -1) return false;
+		
+		Martian m = martians.get(loc);
+		martians.remove(loc);
+		
+		if(m instanceof GreenMartian){
+			
+			teleporters.remove((ITeleporter)m);
+			
+		}
+		
+		return true;
+		
+	}
+	
+	public ArrayList<Martian> sortedMartians(){
+		
+		@SuppressWarnings("unchecked")
+		ArrayList<Martian> sorted = (ArrayList<Martian>) martians.clone();
+		Collections.sort(sorted);
+		return sorted;
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+
+}
