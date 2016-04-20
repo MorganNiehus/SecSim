@@ -15,7 +15,7 @@ public class PQExample {
 		Employee e4 = new Employee("Dern", "Donald", 243558673, 23.44);
 
 		// Create priority queue to hold Employee objects ordering by SSN
-		Queue<Employee> pqEmps = new PriorityQueue<>(20, new EmployeeSSNComparator() );
+		Queue<Employee> pqEmps = new PriorityQueue<>(20, new EmployeeSalaryComparator() );
 		
 		// Add employees to p.queue
 		pqEmps.offer(e1);

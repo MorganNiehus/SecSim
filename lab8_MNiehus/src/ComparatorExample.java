@@ -33,6 +33,32 @@ public class ComparatorExample {
 		Collections.sort(employees, salComp);
 		System.out.println("\nSorted on Salary");
 		printList(employees);
+		
+		// Stage 2
+		// Get employee with largest and smallest SSN
+		Employee eMax = Collections.max(employees, ssnComp);
+		Employee eMin = Collections.min(employees, ssnComp);
+		System.out.println("\nEmployee with largest SSN: " + eMax);
+		System.out.println("Employee with smallest SSN: " + eMin);
+
+		// Must be sorted on SSN for binarySearch to work (for finding matching SSN)
+		Collections.sort(employees, ssnComp);
+		System.out.println("Current List");
+		printList(employees);
+		Employee eKey = new Employee(243558673);
+		// Search for employee that matches "eKey"
+		int pos = Collections.binarySearch(employees, eKey, ssnComp);
+		// Get employee that was found. This is of course hard-coded and the
+		// employee does exist. In general, when pos>=0, then key was found,
+		// so, pos<0 would mean the employee was not found.
+		Employee e = employees.get(pos);
+		System.out.println("\nEmployee Key searched for: " + eKey);
+		System.out.println("Employee found: " + e);
+		
+		// Sort list in reverse order according to the SSN comparator
+		Collections.sort(employees, Collections.reverseOrder(ssnComp));
+		System.out.println("\nSorted on SSN reversed");
+		printList(employees);
 
 	}
 	
