@@ -145,7 +145,9 @@ public class HashSetExamples {
 		System.out.println("\n-->Problem3");
 		System.out.println("\nEmployees who had:\n   " + "module 1: " + hsEmps1 + "\n   " + "module 2: " + hsEmps2);
 		Set<Integer> hsExactly1Mod = new HashSet<>(hsEmps1);
+		hsExactly1Mod.addAll(hsEmps2);
 		hsExactly1Mod.retainAll(hsEmps2);
+		hsExactly1Mod.removeAll(hsEmps1);
 		System.out.println("Employees who had exactly 1 module:\n   " + hsExactly1Mod);		
 	}
 	
