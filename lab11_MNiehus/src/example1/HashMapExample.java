@@ -61,6 +61,10 @@ public class HashMapExample {
 		System.out.println("containsKey(key)=" + isInMap);
 		// Remove the bad mapping
 		hmEmployees.remove(key);
+		
+		System.out.println("After remove " + hmEmployees);
+		hmEmployees.put(e3.getSSNum(), e3);
+		
 		// Re-add e5 properly.
 		hmEmployees.put(e5.getSSNum(), e5);
 		// Get employee with key
@@ -79,7 +83,7 @@ public class HashMapExample {
 		//}
 		
 		// Stage 2 - Example b
-		ArrayList<Integer> keys2 = new ArrayList<>(Arrays.asList(338290448, 4, 476227851 ));
+		ArrayList<Integer> keys2 = new ArrayList<>(Arrays.asList(338290448, 476227851 ));
 		ArrayList<Employee> emps2 = new ArrayList<>();
 		// Write code here.
 			
@@ -89,12 +93,65 @@ public class HashMapExample {
 		}
 		
 		System.out.println("\nExample b");
-		System.out.println(emps2);
+		for(Employee e : emps2){
+			System.out.println(e);
+		}
+		
+		// Stage 3
+		System.out.println("\nStage 3");
+		// Create another HashMap and put some Emps in
+		Map<Integer,Employee> hmEmployees2 = new HashMap<>();
+		hmEmployees2.put(e5.getSSNum(), e5);
+		hmEmployees2.put(e6.getSSNum(), e6);
+		// Put 2nd map into first.
+		hmEmployees.putAll( hmEmployees2 );
+		printKeysAndValues(hmEmployees, "\nHashMap after putAll");
+		
+		// Stage 3 - Example
+		System.out.println("\nStage 3 - example");
+		// Remove a few values from hmEmployees
+		hmEmployees.remove(e5.getSSNum());
+		hmEmployees.remove(e6.getSSNum());
+		// Write code here…
+		Map<Integer, Employee> allEmployeeshm = new HashMap<>(hmEmployees);
+		allEmployeeshm.putAll(hmEmployees2);
+		printKeysAndValues(allEmployeeshm, "\nHashMap Combined");
 
+		// Stage 4a
+		System.out.println("\nStage 4a");
+		SortedSet<Integer> keysOrdered = new TreeSet<>(hmEmployees.keySet());
+		for(int k : keysOrdered) {
+		Employee e = hmEmployees.get(k);
+		System.out.println("Key=" + k + " Value=" + e);
+		}
 
+		// Stage 4b
+		System.out.println("\nStage 4b");
+		Map<Integer,Employee> hmDupValues = new HashMap<Integer,Employee>();
+		hmDupValues.put(e1.getSSNum(), e1);
+		hmDupValues.put(e2.getSSNum(), e1);
+		hmDupValues.put(e3.getSSNum(), e1);
+		printKeysAndValues(hmDupValues, "\nHashMap with Duplicate Values");
+		
+		// Stage 4c
+		System.out.println("\nStage 4c");
+		// Get values collection.
+		Collection<Employee> colEmps = hmEmployees.values();
+		// Turn collection into list
+		List<Employee> listEmps = new ArrayList<Employee>( colEmps );
+		// Sort the list
+		Comparator<Employee> nameComp = new EmployeeNameComparator();
+		Collections.sort( listEmps, nameComp );
+		System.out.println( "Values ordered on Name:" );
+		for(Employee e : listEmps) System.out.println(e);
+		// Or, turn collection into tree set, loses any duplicates.
+		System.out.println( "\nValues ordered on Name:" );
+		TreeSet<Employee> tSetEmps = new TreeSet<Employee>( colEmps );
+		for(Employee e : tSetEmps) System.out.println(e);
 
 	}
 
+	@SuppressWarnings("unused")
 	private static void printValues(Collection<Employee> vals) {
 		for(Employee e : vals) System.out.println(e);
 		System.out.println( );
